@@ -43,7 +43,7 @@
         "format": " {:%H:%M}"
     },
     "backlight": {
-        "device": "intel_backlight",
+        "device": "amdgpu_bl1",
         "format": "{icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
         "tooltip": false
