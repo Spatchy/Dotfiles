@@ -1,0 +1,36 @@
+{
+    "label" : "shutdown-icon",
+    "action" : "systemctl poweroff",
+    "text" : "",
+    "keybind" : "s"
+}
+{
+    "label" : "suspend-icon",
+    "action" : "systemctl suspend",
+    "text" : "",
+    "keybind" : "u"
+}
+{
+    "label" : "lock-icon",
+    "action" : "/home/james/Scripts/lock.sh",
+    "text" : ""
+    "keybind" : "l"
+}
+{
+    "label" : "hibernate-icon",
+    "action" : "systemctl hibernate",
+    "text" : "",
+    "keybind" : "h"
+}
+{
+    "label" : "logout-icon",
+    "action" : "loginctl terminate-user $USER",
+    "text" : "",
+    "keybind" : "e"
+}
+{
+    "label" : "reboot-icon",
+    "action" : "systemctl reboot",
+    "text" : "",
+    "keybind" : "r"
+}

@@ -1,0 +1,77 @@
+* {
+  background-image: none;
+  box-shadow: none;
+}
+
+window {
+  background-color: #313244;
+}
+
+button {
+  background-color: #1e1e2e;
+  border-style: solid;
+  border-width: 0px;
+  outline-style: none;
+  outline-width: 0px;
+  color: #5e81ac;
+  margin-top: 250px;
+  margin-bottom: 600px;
+  padding-bottom: 10px;
+  border-radius: 0;
+}
+
+#shutdown-icon {
+  border-radius: 999px 0 0 999px;
+  color: #f38ba8;
+}
+
+#shutdown-icon:hover {
+  background-color: #f38ba8;
+  color: #313244;
+}
+
+#suspend-icon {
+  color: #fab387;
+}
+
+#suspend-icon:hover {
+  background-color: #fab387;
+  color: #313244;
+}
+
+#lock-icon {
+  color: #f9e2af;
+}
+
+#lock-icon:hover {
+  background-color: #f9e2af;
+  color: #313244;
+}
+
+#hibernate-icon {
+  color: #a6e3a1;
+}
+
+#hibernate-icon:hover {
+  background-color: #a6e3a1;
+  color: #313244;
+}
+
+#logout-icon {
+  color: #89b4fa;
+}
+
+#logout-icon:hover {
+  background-color: #89b4fa;
+  color: #313244;
+}
+
+#reboot-icon {
+  color: #f5c2e7;
+  border-radius: 0 999px 999px 0;
+}
+
+#reboot-icon:hover {
+  background-color: #f5c2e7;
+  color: #313244;
+}

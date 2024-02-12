@@ -1,0 +1,129 @@
+@import "mocha.css";
+
+* {
+  font-family: Caskaydia Cove Nerd Font;
+  font-size: 17px;
+  min-height: 0;
+}
+
+#waybar {
+  background: transparent;
+  color: @text;
+}
+
+#workspaces {
+  border-radius: 1rem;
+  margin-top: 0.5rem;
+  background-color: @surface0;
+  margin-left: 0.5rem;
+}
+
+#workspaces button {
+  color: @lavender;
+  border-radius: 1rem;
+  padding: 0.3rem;
+}
+
+#workspaces button.active {
+  color: @sky;
+  border-radius: 1rem;
+}
+
+#workspaces button:hover {
+  color: @sapphire;
+  border-radius: 1rem;
+}
+
+#custom-music,
+#tray,
+#backlight,
+#clock,
+#battery,
+#pulseaudio,
+#custom-lock,
+#custom-power,
+#custom-notification,
+#network {
+  background-color: @surface0;
+  padding: 0.3rem 1rem;
+  margin-top: 0.5rem;
+}
+
+#clock {
+  color: @blue;
+  border-radius: 0px 99rem 99rem 0px;
+  margin-right: 1rem;
+}
+
+#custom-notification {
+  color: @sky
+}
+
+#network {
+  color: @lavender;
+}
+
+#battery {
+  color: @green;
+}
+
+#battery.charging {
+  color: @green;
+}
+
+#battery.warning:not(.charging) {
+  color: @red;
+}
+
+#battery.critical:not(.charging) {
+  color: @red;
+  animation: batteryCriticalAnimation 5s ease 0s infinite normal forwards;
+}
+
+@keyframes batteryCriticalAnimation {
+  0% {color: @red;}
+  50% {color: @surface0;}
+  100% {color: @red;}
+}
+
+#backlight {
+  color: @yellow;
+}
+
+#backlight, #battery {
+    border-radius: 0;
+}
+
+sup {
+  color: @red;
+}
+
+#pulseaudio {
+  color: @maroon;
+  border-radius: 99rem 0px 0px 99rem;
+  margin-left: 1rem;
+}
+
+#custom-music {
+  color: @mauve;
+  border-radius: 999rem;
+}
+
+#custom-lock {
+    border-radius: 99rem 0px 0px 99rem;
+    color: @lavender;
+    padding-right: 0.5rem
+}
+
+#custom-power {
+    margin-right: 0.5rem;
+    border-radius: 0px 99rem 99rem 0px;
+    color: @red;
+    padding-left: 0.5rem;
+    padding-right: 1.2rem;
+}
+
+#tray {
+  margin-right: 1rem;
+  border-radius: 99rem;
+}

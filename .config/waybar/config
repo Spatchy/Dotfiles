@@ -1,0 +1,96 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    // "width": 1280, // Waybar width
+    // Choose the order of the modules
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["custom/music"],
+    "modules-right": ["pulseaudio", "backlight", "battery", "network", "custom/notification", "clock", "custom/lock", "custom/power"],
+    "hyprland/workspaces": {
+         "disable-scroll": true,
+         "sort-by-name": true,
+         "format": " {icon} ",
+         "format-icons": {
+             "default": "",
+         },
+     },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 4
+    },
+    "custom/music": {
+        "format": "  {}",
+        "escape": true,
+        "interval": 5,
+        "tooltip": false,
+        "exec": "playerctl metadata --format='{{ title }}'",
+        "on-click": "playerctl play-pause",
+        "max-length": 50
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "",
+        "format-ethernet": "",
+        "tooltip-format-wifi": "  {essid} ({ipaddr})\n {ifname} via {gwaddr}",
+        "tooltip-format-ethernet": "  {essid} ({ipaddr})\n {ifname} via {gwaddr}",
+        "format-linked": " {ifname} (No IP)",
+        "format-disconnected": " Disconnected",
+        "on-click":"nm-connection-editor"
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": " {:%d/%m/%Y}",
+        "format": " {:%H:%M}"
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "tooltip": false
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "<tt>{icon}  {capacity}%</tt>",
+        "format-charging": "  {capacity}%",
+        "format-plugged": "",
+        "format-icons": ["", "",  "", "", ""]
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon} {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "<span foreground='#f38ba8'><small><sup>⬤</sup></small></span>",
+            "none": "",
+            "dnd-notification": "<span foreground='#f38ba8'><small><sup>⬤</sup></small></span>",
+            "dnd-none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "sleep 0.1 && swaync-client -t -sw",
+        "on-click-right": "sleep 0.1 && swaync-client -d -sw",
+        "escape": true
+    },
+    "custom/lock": {
+        "tooltip": false,
+        "on-click": "sh -c '/home/james/Scripts/lock.sh' & disown",
+        "format": "",
+    },
+    "custom/power": {
+        "tooltip": false,
+        "on-click": "wlogout &",
+        "format": ""
+    }
+}
