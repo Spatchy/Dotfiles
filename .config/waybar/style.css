@@ -43,7 +43,8 @@
 #custom-lock,
 #custom-power,
 #custom-notification,
-#network {
+#network,
+#bluetooth {
   background-color: @surface0;
   padding: 0.3rem 1rem;
   margin-top: 0.5rem;
@@ -122,6 +123,22 @@ sup {
     padding-left: 0.5rem;
     padding-right: 1.2rem;
 }
+
+#bluetooth.on,
+#bluetooth.connected,
+#bluetooth.discoverable,
+#bluetooth.discovering,
+#bluetooth.pairable {
+ color: @blue
+}
+
+#bluetooth,
+#bluetooth.disabled,
+#bluetooth.off {
+    color: @overlay1
+}
+
+
 
 #tray {
   margin-right: 1rem;

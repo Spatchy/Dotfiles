@@ -5,7 +5,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["custom/music"],
-    "modules-right": ["pulseaudio", "backlight", "battery", "network", "custom/notification", "clock", "custom/lock", "custom/power"],
+    "modules-right": ["pulseaudio", "backlight", "battery", "network", "bluetooth", "custom/notification", "clock", "custom/lock", "custom/power"],
     "hyprland/workspaces": {
          "disable-scroll": true,
          "sort-by-name": true,
@@ -36,6 +36,19 @@
         "format-linked": " {ifname} (No IP)",
         "format-disconnected": " Disconnected",
         "on-click":"nm-connection-editor"
+    },
+    "bluetooth": {
+	"format": "",
+	"format-connected": "",
+	"format-connected-battery": "",
+	// "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+	"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-disconnected": "Disconnected",
+	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+	"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+        "on-click": "notify-send 'Bluetooth' 'Turning bluetooth on' && systemctl enable bluetooth --now && sleep 1 && overskride",
+        "on-click-right": "notify-send 'Bluetooth' 'Turning bluetooth off' && systemctl disable bluetooth --now" 
     },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
