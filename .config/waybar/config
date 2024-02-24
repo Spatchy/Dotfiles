@@ -57,7 +57,7 @@
     },
     "backlight": {
         "device": "amdgpu_bl1",
-        "format": "{icon}",
+        "format": "{icon} {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
         "tooltip": false
     },
@@ -66,10 +66,10 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "<tt>{icon}  {capacity}%</tt>",
+        "format": "{icon}  {capacity}%",
         "format-charging": "  {capacity}%",
         "format-plugged": "",
-        "format-icons": ["", "",  "", "", ""]
+        "format-icons": ["", "", "", "", ""]
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
