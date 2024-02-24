@@ -12,26 +12,28 @@
 }
 
 #workspaces {
-  border-radius: 1rem;
+  border-radius: 99rem;
   margin-top: 0.5rem;
   background-color: @surface0;
   margin-left: 0.5rem;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 #workspaces button {
   color: @lavender;
-  border-radius: 1rem;
-  padding: 0.3rem;
+  padding: 0.1rem;
+  border-radius: 100%;
+  padding-right: 5px;
 }
 
 #workspaces button.active {
   color: @sky;
-  border-radius: 1rem;
 }
 
 #workspaces button:hover {
   color: @sapphire;
-  border-radius: 1rem;
+  box-shadow: none;
 }
 
 #custom-music,
